@@ -8,10 +8,22 @@ Topic        : Binary Search
 Category     : Binary Search on Answers
 Difficulty   : Hard
 
-Approach   :
-Time Complexity  :
-Space Complexity :
+Date last solved : 3 June 2026
+
 */
+
+/*----------------------------------------------------------
+BRUTE FORCE
+-----------------------------------------------------------
+
+Approach         : Brute Force
+Time Complexity  : O((sum - max + 1) * n)
+Space Complexity : O(1)
+
+*/
+
+
+// Code
 
 class Solution {
     public int findPages(int[] nums, int m) {
@@ -21,7 +33,7 @@ class Solution {
         int [] maxAndSum = findMaximumAndSummation(nums);
         int startPage = maxAndSum[0];
         int endPage = maxAndSum[1];
-        for(int i = startPage; i < endPage; i++) {
+        for(int i = startPage; i <= endPage; i++) {
             if(isAllocationPossible(i, nums, m)) {
                 return i;
             }
@@ -47,6 +59,70 @@ class Solution {
         else {
             return false;
         }
+    }
+    int [] findMaximumAndSummation(int [] nums) {
+        int max = nums[0];
+        int sum = 0;
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] > max) {
+                max = nums[i];
+            }
+            sum += nums[i];
+        }
+        return new int [] {max, sum};
+    }
+}
+
+
+
+/*----------------------------------------------------------
+OPTIMAL
+-----------------------------------------------------------
+
+Approach         : Optimal(Binary-Search)
+Time Complexity  : 
+Space Complexity :
+
+*/
+
+
+//  Code
+
+class Solution {
+    public int findPages(int[] nums, int m) {
+        if(m > nums.length) {
+            return -1;
+        }
+        int ans = -1;
+        int [] maxAndSum = findMaximumAndSummation(nums);
+        int startPage = maxAndSum[0];
+        int endPage = maxAndSum[1];
+        while(startPage < endPage) {
+            int midPage = startPage + (endPage- startPage)/2;
+            int stuCount = findAllocatedStudents(midPage, nums);
+            if(stuCount <= m) {
+                ans = midPage;
+                endPage = midPage-1;
+            }
+            else {
+                startPage = midPage + 1;
+            }
+        }
+        return ans;
+    }
+    int findAllocatedStudents(int pages, int [] nums) {
+        int countStudent = 1;
+        int assignedPages = 0;
+        for(int i = 0; i < nums.length; i++) {
+            if(assignedPages + nums[i] <= pages) {
+                assignedPages += nums[i];
+            }
+            else {
+                countStudent++;
+                assignedPages = nums[i];
+            }
+        }
+        return countStudent;
     }
     int [] findMaximumAndSummation(int [] nums) {
         int max = nums[0];
