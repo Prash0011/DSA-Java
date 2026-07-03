@@ -17,7 +17,7 @@ BRUTE FORCE
 -----------------------------------------------------------
 
 Approach         : Brute Force
-Time Complexity  : O((sum - max + 1) * n)
+Time Complexity  : O((sum - max + 1)*O(n))
 Space Complexity : O(1)
 
 */
@@ -80,8 +80,8 @@ OPTIMAL
 -----------------------------------------------------------
 
 Approach         : Optimal(Binary-Search)
-Time Complexity  : 
-Space Complexity :
+Time Complexity  : O(log(sum-max+1))*O(n)
+Space Complexity : O(1)
 
 */
 
