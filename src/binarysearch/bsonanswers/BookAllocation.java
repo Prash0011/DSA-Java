@@ -17,7 +17,7 @@ BRUTE FORCE
 -----------------------------------------------------------
 
 Approach         : Brute Force
-Time Complexity  : O((sum - max + 1)*O(n))
+Time Complexity  : O(n × (sum − max + 1))
 Space Complexity : O(1)
 
 */
@@ -80,7 +80,7 @@ OPTIMAL
 -----------------------------------------------------------
 
 Approach         : Optimal(Binary-Search)
-Time Complexity  : O(log(sum-max+1))*O(n)
+Time Complexity  : O(n × log(sum − max + 1))
 Space Complexity : O(1)
 
 */
@@ -93,12 +93,12 @@ class Solution {
         if(m > nums.length) {
             return -1;
         }
-        int ans = -1;
-        int [] maxAndSum = findMaximumAndSummation(nums);
-        int startPage = maxAndSum[0];
-        int endPage = maxAndSum[1];
-        while(startPage < endPage) {
-            int midPage = startPage + (endPage- startPage)/2;
+       long ans = -1;
+       long [] maxAndSum = findMaximumAndSummation(nums);
+       long startPage = maxAndSum[0];
+       long endPage = maxAndSum[1];
+        while(startPage <= endPage) {
+            long midPage = startPage + (endPage- startPage)/2;
             int stuCount = findAllocatedStudents(midPage, nums);
             if(stuCount <= m) {
                 ans = midPage;
@@ -108,11 +108,11 @@ class Solution {
                 startPage = midPage + 1;
             }
         }
-        return ans;
+        return (int)ans;
     }
-    int findAllocatedStudents(int pages, int [] nums) {
+    int findAllocatedStudents(long pages, int [] nums) {
         int countStudent = 1;
-        int assignedPages = 0;
+        long assignedPages = 0;
         for(int i = 0; i < nums.length; i++) {
             if(assignedPages + nums[i] <= pages) {
                 assignedPages += nums[i];
@@ -124,15 +124,16 @@ class Solution {
         }
         return countStudent;
     }
-    int [] findMaximumAndSummation(int [] nums) {
-        int max = nums[0];
-        int sum = 0;
+    long [] findMaximumAndSummation(int [] nums) {
+        long max = nums[0];
+        long sum = 0;
         for(int i = 0; i < nums.length; i++) {
             if(nums[i] > max) {
                 max = nums[i];
             }
             sum += nums[i];
         }
-        return new int [] {max, sum};
+        return new long [] {max, sum};
     }
 }
+
