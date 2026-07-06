@@ -9,7 +9,7 @@ Topic        : Binary Search
 Category     : Binary Search on Answers
 Difficulty   : Hard
 
-Date last solved : 5 June 2026
+Date last solved : 5 July 2026
 
 */
 

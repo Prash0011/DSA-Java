@@ -8,7 +8,7 @@ Topic        : Binary Search
 Category     : Binary Search on Answers
 Difficulty   : Hard
 
-Date last solved : 3 June 2026
+Date last solved : 3 July 2026
 
 */
 

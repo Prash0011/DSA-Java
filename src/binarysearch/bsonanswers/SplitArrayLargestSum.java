@@ -21,6 +21,8 @@ Approach         : Brute Force
 Time Complexity  : O(n × (sum − max + 1))
 Space Complexity : O(1)
 
+Date last solved : 3 July 2026
+
 */
 
 
