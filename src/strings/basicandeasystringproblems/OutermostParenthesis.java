@@ -2,9 +2,9 @@ package strings.basicandeasystringproblems;
 
 /*
 
-Platform     : GeeksforGeeks/LeetCode(4)
+Platform     : GeeksforGeeks/LeetCode
 Problem Link : https://leetcode.com/problems/remove-outermost-parentheses/description/
-Problem      : Median Of 2 Sorted Arrays
+Problem      : Remove Outermost Parenthesis
 Topic        : String 
 Category     : Basic and Easy problems
 Difficulty   : Easy
