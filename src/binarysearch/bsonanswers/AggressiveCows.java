@@ -7,9 +7,9 @@ import java.util.Arrays;
 Platform     : GeeksforGeeks/LeetCode(4)
 Problem Link : https://www.geeksforgeeks.org/problems/aggressive-cows/1
 Problem      : Aggressive Cows
-Topic        : String 
-Category     : Hard
-Difficulty   : Easy
+Topic        : Binary Search
+Category     : Binary Search On Answers
+Difficulty   : Hard
 
 Date last solved : 15 July 2026
 
