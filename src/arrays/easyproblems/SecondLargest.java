@@ -2,11 +2,10 @@ package arrays.easyproblems;
 
 /*
 
-Platform     : GeeksforGeeks/LeetCode(4)
-Problem Link : https://www.geeksforgeeks.org/problems/aggressive-cows/1
-Problem      : Aggressive Cows
-Topic        : String 
-Category     : Hard
+Platform     : GeeksforGeeks
+Problem Link : https://www.geeksforgeeks.org/problems/second-largest3735/1
+Problem      : Second Largest element in the array
+Topic        : Arrays 
 Difficulty   : Easy
 
 Date last solved : 22 July 2026
