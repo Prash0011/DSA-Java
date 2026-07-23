@@ -34,7 +34,7 @@ class Solution {
 
 /*
  
-Approach         : Brute Force
+Approach         : Optimal
 Time Complexity  : O(n)
 Space Complexity : O(1)
 
