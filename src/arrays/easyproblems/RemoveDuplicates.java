@@ -12,9 +12,9 @@ Difficulty   : Easy
 
 Date last solved : 22 July 2026
 
-Approach         : Optimal
-Time Complexity  : O(n)
-Space Complexity : O(1)
+Approach         : Brute Force
+Time Complexity  : O(n log n + n)
+Space Complexity : O(n)
 
 */
 
@@ -29,5 +29,27 @@ class Solution {
             nums[i++] = num;
         }
         return set.size();
+    }
+}
+
+/*
+ 
+Approach         : Brute Force
+Time Complexity  : O(n)
+Space Complexity : O(1)
+
+*/
+
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int i = 0;
+        for(int j = 1; j < nums.length; j++) {
+            if(nums[j] != nums[i]) {
+                nums[i+1] = nums[j];
+                i++;
+            }
+        }
+        return i+1;
     }
 }
