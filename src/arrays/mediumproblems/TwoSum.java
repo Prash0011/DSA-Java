@@ -8,7 +8,7 @@ Problem      : Return length of the longest sub-array
 Topic        : Arrays 
 Difficulty   : Medium
 
-Date last solved : 31 July 2026
+Date last solved : 02 aug 2026
 
 Approach         : Brute
 Time Complexity  : O(n²)
