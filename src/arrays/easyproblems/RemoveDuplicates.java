@@ -53,3 +53,22 @@ class Solution {
         return i+1;
     }
 }
+
+// My Approach
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int j = 0; 
+        nums[j++] = nums[0];
+        for(int i = 1; i < nums.length; i++) {
+            if(nums[i] == nums[i-1]) {
+                continue;
+            }
+            else {
+                nums[j++] = nums[i];
+            }
+        }
+        return j;
+    
+    }
+}
