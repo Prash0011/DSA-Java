@@ -52,3 +52,17 @@ class Solution {
         arr[n-1] = first; 
     }
 }
+
+// My Approach
+
+class Solution {
+    public void rotateArrayByOne(int[] nums) {
+        int temp = nums[0];
+        int n = nums.length;
+        int j = 0;
+        for(int i = 1; i < n; i++) {
+            nums[j++] = nums[i];
+        }
+        nums[j] = temp;
+    }
+}
