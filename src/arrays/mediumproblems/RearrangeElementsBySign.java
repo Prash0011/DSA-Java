@@ -4,7 +4,7 @@ package arrays.mediumproblems;
 
 Platform     : LeetCode
 Problem Link : https://leetcode.com/problems/maximum-subarray/description/
-Problem      : Find majority element that apperas more than n/2 times
+Problem      : Find majority element that appears more than n/2 times
 Topic        : Arrays 
 Difficulty   : Medium
 
