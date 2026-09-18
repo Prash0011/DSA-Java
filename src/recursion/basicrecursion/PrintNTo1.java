@@ -4,35 +4,35 @@ import java.util.Scanner;
 
 // Method 1- Normal Recursion
 
-class Print1ToN {
+class PrintNTo1 {
 	public static void main(String... ar) {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
-		int i = 1;
-		print1ToN(n, i);
+		printNTo1(n);
 	}
-	static void print1ToN(int n, int i) {
-		if(i > n) {
+	static void printNTo1(int n) {
+		if(n < 1) {
 			return;
 		}
 		System.out.println(n);
-		print1ToN(n, i+1);	
+		printNTo1(n);	
 	}
 }
 
 // Method 2- Backtracking
 
-class Print1ToN {
+class PrintNTo1 {
 	public static void main(String... ar) {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
-		print1ToN(n);
+		int i = 1;
+		printNTo1(n, i);
 	}
-	static void print1ToN(int n) {
-		if(n < 1) {
+	static void printNTo1(int n, int i) {
+		if(i > n) {
 			return;
 		}
-		print1ToN(n-1);
-		System.out.println(n);
+		printNTo1(n, i+1);
+		System.out.println(i);
 	}
 }
