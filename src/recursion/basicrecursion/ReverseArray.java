@@ -53,3 +53,20 @@ class ReverseArray {
 	}
 }
 
+
+class Solution {
+    public int[] reverseArray(int[] nums) {
+        //your code goes here
+        int [] ans = new int[nums.length];
+        int i = nums.length-1;
+        int j = 0;
+        return reverse(nums, i, j, ans);
+    }
+    int [] reverse(int [] nums, int i, int j, int [] ans) {
+        if(i < 0) {
+            return ans;
+        }
+        ans[j++] = nums[i];
+        return reverse(nums, i-1, j, ans);
+    }
+}
