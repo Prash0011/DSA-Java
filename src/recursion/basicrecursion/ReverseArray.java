@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 // Method 1
 
+// In place 
+
 class ReverseArray {
 	public static void main(String... ar) {
 		Scanner in = new Scanner(System.in);
