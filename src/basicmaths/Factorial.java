@@ -7,7 +7,7 @@ class Solution {
         }
         int i = 2;
         int fact = 1;
-        while(i >= n) {
+        while(i <= n) {
             fact *= i;
         }
         return fact;
