@@ -32,7 +32,7 @@ class Solution {
 Method - 2
 
 Approach         : Better
-Time Complexity  : TC=O(min(n1,n2)​/GCD(n1,n2))
+Time Complexity  : TC = O(min(n1,n2)​/GCD(n1,n2))
 Space Complexity : O(1)
 
 */
