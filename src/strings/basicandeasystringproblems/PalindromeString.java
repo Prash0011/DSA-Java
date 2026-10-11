@@ -3,7 +3,7 @@ package strings.basicandeasystringproblems;
 /*
 
 Platform     : TUF
-Problem Link : https://takeuforward.org/practice/dsa/highest-occurring-element-in-an-array?tab=problem
+Problem Link : https://leetcode.com/problems/valid-palindrome/description/
 Problem      : Find most frequent element
 Topic        : Strings
 Difficulty   : Core(Medium)
