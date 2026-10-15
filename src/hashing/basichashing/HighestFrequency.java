@@ -33,8 +33,7 @@ class Solution {
             }
             else {
                 if(count == prevCount) {
-                    ans = Math.min(ans, nums[i]);
-                   
+                    ans = Math.min(ans, nums[i]); 
                 }    
             }    
         }
@@ -71,8 +70,7 @@ class Solution {
                 j++;
             }
 
-            if (cnt > prevCnt ||
-                (cnt == prevCnt && nums[i] < ans)) {
+            if (cnt > prevCnt || (cnt == prevCnt && nums[i] < ans)) {
                 prevCnt = cnt;
                 ans = nums[i];
             }
